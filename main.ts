@@ -1,17 +1,24 @@
-import { mkdirSync, readFileSync, writeFileSync } from "node:fs";
+import * as fs from "node:fs";
+import * as path from "node:path";
 
-// Make the AI Judge Laugh entry: a single original one-line office joke.
-// Gate: /output/entry.txt must be UTF-8 text of 1 to 200 characters (this line is 115).
-const line =
+const LINE =
   "The office plant has survived three managers, two layoffs, one rebrand. It is the only one of us with job security.";
 
-if (line.length < 1 || line.length > 200) {
-  throw new Error(`entry must be 1-200 characters, got ${line.length}`);
+const OUT_DIR = "/output";
+const OUT_FILE = path.join(OUT_DIR, "entry.txt");
+
+if (LINE.length < 1 || LINE.length > 200) {
+  throw new Error(
+    `Entry must be 1-200 characters, got ${LINE.length} characters.`
+  );
 }
 
-mkdirSync("/output", { recursive: true });
-writeFileSync("/output/entry.txt", line, "utf8");
-if (readFileSync("/output/entry.txt", "utf8") !== line) {
-  throw new Error("entry.txt does not match the office joke line");
+fs.mkdirSync(OUT_DIR, { recursive: true });
+fs.writeFileSync(OUT_FILE, LINE, "utf8");
+
+const readBack = fs.readFileSync(OUT_FILE, "utf8");
+if (readBack !== LINE) {
+  throw new Error("Verification failed: written file does not match the entry.");
 }
-console.log(`wrote ${line.length} characters to /output/entry.txt`);
+
+console.log(`Wrote ${LINE.length} characters to ${OUT_FILE}`);
