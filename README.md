@@ -1,6 +1,6 @@
 # Make the AI Judge Laugh — The Office Plant
 
-Entry for [One Line, One Laugh: Make the AI Judge Laugh](https://make.fun/bounty/u-rama-melon-make-the-ai-judge-laugh-302d0825) on make.fun.
+Entry for [Make the AI Judge Laugh](https://make.fun/bounty/u-rama-melon-make-the-ai-judge-laugh-302d0825) on make.fun.
 
 [![make.fun](https://make.fun/badge/u-rama-melon-make-the-ai-judge-laugh-302d0825.svg)](https://make.fun/bounty/u-rama-melon-make-the-ai-judge-laugh-302d0825)
 [![rank](https://make.fun/badge/u-rama-melon-make-the-ai-judge-laugh-302d0825/tpl11295/makefun-office-judge-laugh-01/rank.svg)](https://make.fun/bounty/u-rama-melon-make-the-ai-judge-laugh-302d0825)
